@@ -38,7 +38,10 @@
 
           template = pkgs.mkShell {
             inputsFrom = [ packages.template ];
-            packages = [ pkgs.poetry ];
+            packages = [
+              pkgs.poetry
+              pkgs.ruff
+            ];
           };
         };
 
